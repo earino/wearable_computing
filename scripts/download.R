@@ -13,6 +13,10 @@ outFileTmp  <- "Dataset.zip.tmp"
 outDir      <- paste0(getwd(),"/downloads")
 sourceUrl   <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
+if (!file.exists(outDir)) {
+  dir.create(outDir)
+}
+
 destfile    <- paste0(outDir,"/",outFileTmp)
 masterfile  <- paste0(outDir,"/",outFile)
 
